@@ -86,6 +86,15 @@ $ drizzle-kit generate --dialect pg --schema src/schema.ts
 $ drizzle-kit generate --dialect .. --schema .. --out ./migration-folder
 ## runs generate command and outputs results to ./migration-folder
 ```  
+
+
+**`$ drizzle-kit introspect:pg`** - generate `schema.ts` file from existing PG database within seconds
+```shell
+drizzle-kit introspect:pg --out=migrations/ --connectionString=postgresql://user:pass@host:port/db_name
+
+drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=postgres --password=pass --database=db_name --ssl
+```
+
 **`$ drizzle-kit up`** - updates stale snapshots
 `--config` [optional defalut=drizzle.config.json] path to an optional config file\
 `--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
