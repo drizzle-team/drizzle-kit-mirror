@@ -1,10 +1,10 @@
 ## Drizzle Kit
-DrizzleKit - is a CLI migrator tool for DrizzleORM. It is probably one and only tool that lets you completely automatically generate SQL migrations and covers ~95% of the common cases like delitions and renames by prompting user input.\
+DrizzleKit - is a CLI migrator tool for DrizzleORM. It is probably one and only tool that lets you completely automatically generate SQL migrations and covers ~95% of the common cases like deletions and renames by prompting user input.\
 https://github.com/drizzle-team/drizzle-kit-mirror - is a mirror repository for issues.
 
 ### How it works
-`drizzle-kit` will traverse `schema folder` or `schema file`, generate schema snapshot and compare it to the previous version(if there's one).\
- Based on the difference it will generate all needed SQL migrations and if there're any `automatically unresolvable` cases like `renames` it will prompt user for input.
+`drizzle-kit` will traverse `schema folder` or `schema file`, generate schema snapshot and compare it to the previous version (if there's one).\
+ Based on the difference it will generate all needed SQL migrations and if there are any `automatically unresolvable` cases like `renames` it will prompt user for input.
 
 For schema file:
 ```typescript
@@ -69,10 +69,11 @@ Or put your file to `drizzle.config.json` configuration file:
 ---
 ### List of commands
 **`$ drizzle-kit generate`** - generates SQL migrations based on .ts schema\
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
+`--config` [optional default=drizzle.config.json] path to an optional config file\
 `--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
 `--schema` path to a schema file or folder with multiple schema files\
 `--out` [optional default=drizzle/] place where to store migration files\
+
 ```shell
 $ drizzle-kit generate 
 ## runs generate command with drizzle.config.json 
@@ -96,12 +97,12 @@ drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=po
 ```
 
 **`$ drizzle-kit up`** - updates stale snapshots
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
+`--config` [optional default=drizzle.config.json] path to an optional config file\
 `--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
 `--schema` path to a schema file or folder with multiple schema files\
 
 **`$ drizzle-kit check`** - checks for collisions
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
+`--config` [optional default=drizzle.config.json] path to an optional config file\
 `--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
 `--schema` path to a schema file or folder with multiple schema files\
 
