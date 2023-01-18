@@ -61,49 +61,70 @@ $ npm exec drizzle-kit generate --out migrations-folder --dialect pg --schema sr
 Or put your file to `drizzle.config.json` configuration file:
 ```json
 {
-  "dialect": "pg",
   "out": "./migrations-folder",
   "schema": "./src/db"
 }
 ```
 ---
-### List of commands
-**`$ drizzle-kit generate`** - generates SQL migrations based on .ts schema\
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
-`--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
-`--schema` path to a schema file or folder with multiple schema files\
-`--out` [optional default=drizzle/] place where to store migration files\
+## List of commands
+
+### Generate SQL migrations based on current .ts schema\
+**`$ drizzle-kit generate:pg`** \
+**`$ drizzle-kit generate:mysql`** \
+**`$ drizzle-kit generate:sqlite`** \
+
+`--config` [optional defalut=drizzle.config.json] config file path\
+`--schema` path to typescript schema file or folder with multiple schema files\
+`--out` [optional default=drizzle/] migrations folder
 ```shell
-$ drizzle-kit generate 
+$ drizzle-kit generate:pg 
 ## runs generate command with drizzle.config.json 
 
-$ drizzle-kit generate --config custom.config.json
+$ drizzle-kit generate:pg --config=./custom.config.json
 ## runs generate command with custom.config.json 
 
-$ drizzle-kit generate --dialect pg --schema src/schema.ts
+$ drizzle-kit generate:pg --schema=./src/schema.ts
 ## runs generate command and outputs results to ./drizzle
 
-$ drizzle-kit generate --dialect .. --schema .. --out ./migration-folder
-## runs generate command and outputs results to ./migration-folder
+$ drizzle-kit generate:pg --schema=./src/schema.ts --out=./migrations/
+## runs generate command and outputs results to ./migration
 ```  
 
-
-**`$ drizzle-kit introspect:pg`** - generate `schema.ts` file from existing PG database within seconds
+### Introspect existing database and generate typescript schema
+**`$ drizzle-kit introspect:pg`**
 ```shell
 drizzle-kit introspect:pg --out=migrations/ --connectionString=postgresql://user:pass@host:port/db_name
 
 drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=postgres --password=pass --database=db_name --ssl
 ```
 
-**`$ drizzle-kit up`** - updates stale snapshots
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
-`--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
-`--schema` path to a schema file or folder with multiple schema files\
+### Update stale snapshots
+**`$ drizzle-kit up:pg`** \
+**`$ drizzle-kit up:mysql`**\
+**`$ drizzle-kit up:sqlite`**
 
-**`$ drizzle-kit check`** - checks for collisions
-`--config` [optional defalut=drizzle.config.json] path to an optional config file\
-`--dialect` [optional default=pg] database dialect, one of -> pg, mysql, sqlite\
-`--schema` path to a schema file or folder with multiple schema files\
+`--out` [optional] migrations folder\
+`--config` [optional defalut=drizzle.config.json] config file path
+```shell
+## migrations folder is taken from drizzle.config.json
+drizzle-kit up:pg
+
+drizzle-kit up:pg --out=migrations/ 
+```
+
+### Migrations collisions check
+**`$ drizzle-kit check:pg`**\
+**`$ drizzle-kit check:mysql`**\
+**`$ drizzle-kit check:sqlite`**
+
+`--out` [optional] migration folder\
+`--config` [optional defalut=drizzle.config.json] config file path
+```shell
+## migrations folder is taken from drizzle.config.json
+drizzle-kit check:pg
+
+drizzle-kit check:pg --out=migrations/ 
+```
 
 
 
