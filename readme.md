@@ -108,7 +108,7 @@ Migration file structure >= 0.17.0
 
 To easily migrate from previous folder structure to new you need to run `up` command in drizzle kit. It's a great helper to upgrade your migrations to new format on each drizzle kit major update
 
-![](https://github.com/drizzle-team/drizzle-kit-mirror/blob/update-docs-017/media/up_mysql.gif?raw=true)
+![](media/up_mysql.gif)
 ---
 
 ## List of commands
@@ -152,7 +152,7 @@ drizzle-kit introspect:pg --out=migrations/ --connectionString=postgresql://user
 drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=postgres --password=pass --database=db_name --ssl
 ```
 
-![](https://github.com/drizzle-team/drizzle-kit-mirror/blob/update-docs-017/media/introspect_mysql.gif?raw=true)
+![](media/introspect_mysql.gif)
 
 ### Update stale snapshots
 
@@ -172,7 +172,7 @@ drizzle-kit up:mysql
 drizzle-kit up:mysql --out=migrations/ 
 ```
 
-![](https://github.com/drizzle-team/drizzle-kit-mirror/blob/update-docs-017/media/up_mysql.gif?raw=true)
+![](media/up_mysql.gif)
 
 ### Drop migration
 
@@ -183,7 +183,7 @@ drizzle-kit up:mysql --out=migrations/
 `--out` [optional] migrations folder\
 `--config` [optional defalut=drizzle.config.json] config file path
 
-![](https://github.com/drizzle-team/drizzle-kit-mirror/blob/update-docs-017/media/drop.gif?raw=true)
+![](media/drop.gif)
 
 ### Migrations collisions check
 
