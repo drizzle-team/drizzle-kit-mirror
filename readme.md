@@ -143,7 +143,8 @@ $ drizzle-kit generate:pg --schema=./src/schema.ts --out=./migrations/
 
 ---
 
-**`$ drizzle-kit introspect:pg`**
+**`$ drizzle-kit introspect:pg`** \
+**`$ drizzle-kit introspect:mysql`**
 
 ```shell
 drizzle-kit introspect:pg --out=migrations/ --connectionString=postgresql://user:pass@host:port/db_name
