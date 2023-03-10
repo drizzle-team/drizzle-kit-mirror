@@ -13,7 +13,7 @@ For schema file:
 ```typescript
 // ./src/db/schema.ts
 
-import { integer, pgTable, serial, text, varchar } from "drizzle-orm-pg";
+import { integer, pgTable, serial, text, varchar } from "drizzle-orm/pg-core";
 
 const users = pgTable("users", {
     id: serial("id").primaryKey(),
