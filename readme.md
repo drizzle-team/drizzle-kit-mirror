@@ -62,7 +62,7 @@ npm install -D drizzle-kit
 Running with CLI options
 
 ```shell
-npm exec drizzle-kit generate:pg --out migrations-folder --schema src/db/schema.ts
+npx drizzle-kit generate:pg --out migrations-folder --schema src/db/schema.ts
 ```
 
 Or put your file to `drizzle.config.json` configuration file:
