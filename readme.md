@@ -1,12 +1,12 @@
 ## Drizzle Kit
 
-DrizzleKit - is a CLI migrator tool for DrizzleORM. It is probably one and only tool that lets you completely automatically generate SQL migrations and covers ~95% of the common cases like delitions and renames by prompting user input.\
+DrizzleKit - is a CLI migrator tool for DrizzleORM. It is probably one and only tool that lets you completely automatically generate SQL migrations and covers ~95% of the common cases like deletions and renames by prompting user input.
 <https://github.com/drizzle-team/drizzle-kit-mirror> - is a mirror repository for issues.
 
 ### How it works
 
-`drizzle-kit` will traverse `schema folder` or `schema file`, generate schema snapshot and compare it to the previous version(if there's one).\
- Based on the difference it will generate all needed SQL migrations and if there're any `automatically unresolvable` cases like `renames` it will prompt user for input.
+`drizzle-kit` will traverse `schema folder` or `schema file`, generate schema snapshot and compare it to the previous version, if there's one.
+ Based on the difference it will generate all needed SQL migrations and if there are any `automatically unresolvable` cases like `renames` it will prompt user for input.
 
 For schema file:
 
@@ -78,7 +78,7 @@ Or put your file to `drizzle.config.json` configuration file:
 
 ## Upgrading to 0.17.0
 
-Before running any new migrations `drizzle-kit` will ask you to upgrade in a first place
+Before running any new migrations `drizzle-kit` will ask you to upgrade first
 
 Migration file structure < 0.17.0
 
@@ -106,7 +106,7 @@ Migration file structure >= 0.17.0
     └ 📜 0001_strange_avengers.sql
 ```
 
-To easily migrate from previous folder structure to new you need to run `up` command in drizzle kit. It's a great helper to upgrade your migrations to new format on each drizzle kit major update
+To easily migrate from previous folder structure to new you need to run `up` command in drizzle-kit. It's a great helper to upgrade your migrations to new format on each drizzle kit major update
 
 ![](media/up_mysql.gif)
 ---
@@ -121,8 +121,8 @@ To easily migrate from previous folder structure to new you need to run `up` com
 **`$ drizzle-kit generate:mysql`** \
 **`$ drizzle-kit generate:sqlite`** \
 
-`--config` [optional defalut=drizzle.config.json] config file path\
-`--schema` path to typescript schema file or folder with multiple schema files\
+`--config` [optional default=drizzle.config.json] config file path
+`--schema` path to typescript schema file or folder with multiple schema files
 `--out` [optional default=drizzle/] migrations folder
 
 ```shell
@@ -143,7 +143,7 @@ $ drizzle-kit generate:pg --schema=./src/schema.ts --out=./migrations/
 
 ---
 
-**`$ drizzle-kit introspect:pg`** \
+**`$ drizzle-kit introspect:pg`**
 **`$ drizzle-kit introspect:mysql`**
 
 ```shell
@@ -163,7 +163,7 @@ drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=po
 **`$ drizzle-kit up:sqlite`**
 
 `--out` [optional] migrations folder\
-`--config` [optional defalut=drizzle.config.json] config file path
+`--config` [optional default=drizzle.config.json] config file path
 
 ```shell
 ## migrations folder is taken from drizzle.config.json
@@ -181,7 +181,7 @@ drizzle-kit up:mysql --out=migrations/
 **`$ drizzle-kit drop`** \
 
 `--out` [optional] migrations folder\
-`--config` [optional defalut=drizzle.config.json] config file path
+`--config` [optional default=drizzle.config.json] config file path
 
 ![](media/drop.gif)
 
@@ -194,7 +194,7 @@ drizzle-kit up:mysql --out=migrations/
 **`$ drizzle-kit check:sqlite`**
 
 `--out` [optional] migration folder\
-`--config` [optional defalut=drizzle.config.json] config file path
+`--config` [optional default=drizzle.config.json] config file path
 
 ```shell
 ## migrations folder is taken from drizzle.config.json
