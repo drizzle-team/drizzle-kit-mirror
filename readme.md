@@ -113,17 +113,17 @@ To easily migrate from previous folder structure to new you need to run `up` com
 
 ## List of commands
 
-### Generate SQL migrations based on current .ts schema\
+### Generate SQL migrations based on current .ts schema
 
 ---
 
 **`$ drizzle-kit generate:pg`** \
 **`$ drizzle-kit generate:mysql`** \
-**`$ drizzle-kit generate:sqlite`** \
+**`$ drizzle-kit generate:sqlite`**
 
-`--config` [optional default=drizzle.config.json] config file path
-`--schema` path to typescript schema file or folder with multiple schema files
-`--out` [optional default=drizzle/] migrations folder
+`--config` [optional default=drizzle.config.json] config file path\
+`--schema` path to typescript schema file or folder with multiple schema files\
+`--out` [optional default=drizzle/] migrations folder\
 
 ```shell
 $ drizzle-kit generate:pg 
@@ -137,6 +137,13 @@ $ drizzle-kit generate:pg --schema=./src/schema.ts
 
 $ drizzle-kit generate:pg --schema=./src/schema.ts --out=./migrations/
 ## runs generate command and outputs results to ./migration
+```
+
+**Generate an empty SQL migration with `--custom`**
+
+```shell
+$ drizzle-kit generate:pg --custom
+## runs generate command and outputs an empty migration for custom SQL 
 ```  
 
 ### Introspect existing database and generate typescript schema
