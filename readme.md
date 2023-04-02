@@ -70,7 +70,7 @@ Or put your file to `drizzle.config.json` configuration file:
 ```json
 {
   "out": "./migrations-folder",
-  "schema": "./src/db"
+  "schema": "./src/db/schema.ts"
 }
 ```
 
