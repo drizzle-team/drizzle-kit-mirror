@@ -126,11 +126,11 @@ To easily migrate from previous folder structure to new you need to run `up` com
 `--out` [optional default=drizzle/] migrations folder\
 
 ```shell
-$ drizzle-kit generate:pg 
-## runs generate command with drizzle.config.json 
+$ drizzle-kit generate:pg
+## runs generate command with drizzle.config.json
 
 $ drizzle-kit generate:pg --config=./custom.config.json
-## runs generate command with custom.config.json 
+## runs generate command with custom.config.json
 
 $ drizzle-kit generate:pg --schema=./src/schema.ts
 ## runs generate command and outputs results to ./drizzle
@@ -143,14 +143,14 @@ $ drizzle-kit generate:pg --schema=./src/schema.ts --out=./migrations/
 
 ```shell
 $ drizzle-kit generate:pg --custom
-## runs generate command and outputs an empty migration for custom SQL 
-```  
+## runs generate command and outputs an empty migration for custom SQL
+```
 
 ### Introspect existing database and generate typescript schema
 
 ---
 
-**`$ drizzle-kit introspect:pg`**
+**`$ drizzle-kit introspect:pg`** \
 **`$ drizzle-kit introspect:mysql`**
 
 ```shell
@@ -166,7 +166,7 @@ drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=po
 ---
 
 **`$ drizzle-kit up:pg`** \
-**`$ drizzle-kit up:mysql`**\
+**`$ drizzle-kit up:mysql`** \
 **`$ drizzle-kit up:sqlite`**
 
 `--out` [optional] migrations folder\
@@ -176,7 +176,7 @@ drizzle-kit introspect:pg --out=migrations/ --host=0.0.0.0 --port=5432 --user=po
 ## migrations folder is taken from drizzle.config.json
 drizzle-kit up:mysql
 
-drizzle-kit up:mysql --out=migrations/ 
+drizzle-kit up:mysql --out=migrations/
 ```
 
 ![](media/up_mysql.gif)
@@ -185,7 +185,7 @@ drizzle-kit up:mysql --out=migrations/
 
 ---
 
-**`$ drizzle-kit drop`** \
+**`$ drizzle-kit drop`**
 
 `--out` [optional] migrations folder\
 `--config` [optional default=drizzle.config.json] config file path
@@ -196,8 +196,8 @@ drizzle-kit up:mysql --out=migrations/
 
 ---
 
-**`$ drizzle-kit check:pg`**\
-**`$ drizzle-kit check:mysql`**\
+**`$ drizzle-kit check:pg`** \
+**`$ drizzle-kit check:mysql`** \
 **`$ drizzle-kit check:sqlite`**
 
 `--out` [optional] migration folder\
@@ -207,5 +207,5 @@ drizzle-kit up:mysql --out=migrations/
 ## migrations folder is taken from drizzle.config.json
 drizzle-kit check:pg
 
-drizzle-kit check:pg --out=migrations/ 
+drizzle-kit check:pg --out=migrations/
 ```
