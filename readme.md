@@ -79,7 +79,7 @@ Instead of passing arguments to the CLI commands, you can also create a `drizzle
 
 * `out` - path to the output directory where migrations will be saved,
 * `schema` - path to TypeScript schema file or folder with multiple schema files,
-* `breakpoint` - whether to execute each statement in the migrations individually. Set to `true` if you're using the `better-sqlite3` adapter.
+* `breakpoints` - whether to execute each statement in the migrations individually. Set to `true` if you're using the `better-sqlite3` adapter.
 
 ---
 
