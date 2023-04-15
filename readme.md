@@ -65,14 +65,21 @@ Running with CLI options
 npx drizzle-kit generate:pg --out migrations-folder --schema src/db/schema.ts
 ```
 
-Or put your file to `drizzle.config.json` configuration file:
+### Configuration
+
+Instead of passing arguments to the CLI commands, you can also create a `drizzle.config.json` configuration file:
 
 ```json
 {
   "out": "./migrations-folder",
-  "schema": "./src/db"
+  "schema": "./src/db",
+  "breakpoints": false
 }
 ```
+
+* `out` - path to the output directory where migrations will be saved,
+* `schema` - path to TypeScript schema file or folder with multiple schema files,
+* `breakpoints` - whether to execute each statement in the migrations individually. Set to `true` if you are using SQLite or MySQL (as they don't support multiple DDL statements in a transaction).
 
 ---
 
@@ -124,6 +131,7 @@ To easily migrate from previous folder structure to new you need to run `up` com
 `--config` [optional default=drizzle.config.json] config file path\
 `--schema` path to typescript schema file or folder with multiple schema files\
 `--out` [optional default=drizzle/] migrations folder\
+`--breakpoints` [optional default=false] whether to execute each statement in the migrations individually\
 
 ```shell
 $ drizzle-kit generate:pg 
