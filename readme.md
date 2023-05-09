@@ -19,7 +19,7 @@ const users = pgTable("users", {
     id: serial("id").primaryKey(),
     fullName: varchar("full_name", { length: 256 }),
   }, (table) => ({
-    nameIdx: index("name_idx", table.fullName),
+    nameIdx: index("name_idx").on(table.fullName),
   })
 );
 
