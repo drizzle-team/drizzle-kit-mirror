@@ -3,6 +3,10 @@
 DrizzleKit - is a CLI migrator tool for DrizzleORM. It is probably one and only tool that lets you completely automatically generate SQL migrations and covers ~95% of the common cases like deletions and renames by prompting user input.
 <https://github.com/drizzle-team/drizzle-kit-mirror> - is a mirror repository for issues.
 
+## Documentation
+
+Check the full documenation on [the website](https://orm.drizzle.team/kit-docs/overview)
+
 ### How it works
 
 `drizzle-kit` will traverse `schema folder` or `schema file`, generate schema snapshot and compare it to the previous version, if there's one.
