@@ -218,7 +218,6 @@ drizzle-kit up:mysql --out=migrations/
 ---
 
 **`$ drizzle-kit check:pg`** \
-**`$ drizzle-kit check:mysql`** \
 **`$ drizzle-kit check:sqlite`**
 
 `--out` [optional] migration folder\
